@@ -49,8 +49,9 @@ app.post('/search', async (req, res) => {
         const { name, taxonomy, locations, characteristics } = data[0];
         res.render(__dirname + "/views/home.ejs", { name, taxonomy, locations, characteristics });
     } catch (error) {
+        const name = null;
         console.error('Error fetching data:', error);
-        res.render( __dirname + "/views/home.ejs", { error });
+        res.render( __dirname + "/views/home.ejs", { error, name });
     }
 
 });
