@@ -11,3 +11,5 @@ Technologies Used
 Express.js: Express.js is a web application framework for Node.js that is used to build the backend server of the webpage. It handles routing, request handling, and integration with external APIs.
 EJS (Embedded JavaScript): EJS is a templating language that allows embedding JavaScript code directly into HTML markup. It is used to dynamically generate HTML content on the server-side based on user input and data retrieved from the API.
 API Ninjas: The webpage integrates with an external Animal API to retrieve information about animals based on user queries.
+
+Hosted with Render at https://animalsapi.onrender.com/
