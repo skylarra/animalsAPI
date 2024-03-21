@@ -1,0 +1,179 @@
+<!DOCTYpE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a882569ff6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="\css\styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <h1 class="outfitMed">Search for Animal Information</h1>
+    </header>
+    <main>
+        <form action="/search" method="post">
+            <div class="search-wrapper">
+                <input type="search" placeholder="Cheetah" id="animalSearch" name="q">
+                <button type="submit" id="animalSubmit"><i class="fas fa-search"></i></button>
+            </div>
+            
+        </form>
+        <div class="info">
+            <div class="infoContainer a">
+                <div class="card">
+                    <h2 class="outfitMed">Name</h2>
+                    <p class="outfitReg"> <%= name %> </p>
+                </div>
+    
+                <div class="card">
+                    <table>
+                        <tr>
+                            <th class="outfitMed">Kindgom</th>
+                            <td class="outfitReg"> <%= taxonomy.kingdom %> </td>
+                        </tr>
+                        <tr>
+                            <th class="outfitMed">Phylum</th>
+                            <td class="outfitReg"><%= taxonomy.phylum %></td>
+                        </tr>
+                        <tr>
+                            <th class="outfitMed">Class</th>
+                            <td class="outfitReg"><%= taxonomy.class %></td>
+                        </tr>
+                        <tr>
+                            <th class="outfitMed">Order</th>
+                            <td class="outfitReg"><%= taxonomy.order %></td>
+                        </tr>
+                        <tr>
+                            <th class="outfitMed">Family</th>
+                            <td class="outfitReg"><%= taxonomy.family %></td>
+                        </tr>
+                        <tr>
+                            <th class="outfitMed">Genus</th>
+                            <td class="outfitReg"><%= taxonomy.genus %></td>
+                        </tr>
+                        <tr>
+                            <th class="outfitMed">Scientific Name</th>
+                            <td class="outfitReg"><%= taxonomy.scientific_name %></td>
+                        </tr>
+                    </table>
+    
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Can be found in</h3>
+                    <p class="outfitReg"> <%= locations %> </p>
+                </div>
+            </div>
+            <div class="infoContainer b">
+                <div class="card">
+                    <h3 class="outfitMed">prey</h3>
+                    <p class="outfitReg"> <%= characteristics.prey %> </p>
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Name of Young</h3>
+                    <p class="outfitReg"> 
+                        <%= characteristics.name_of_young %> 
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Group Behavior</h3>
+                    <p class="outfitReg"><%= characteristics.group_behavior %></p>
+                </div>
+            </div>
+            <div class="infoContainer c">
+                <div class="card">
+                    <h3 class="outfitMed">Estimated population Size</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.estimated_population_size %>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Biggest threat</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.biggest_threat %>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Habitat</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.habitat %>
+                    </p>
+                </div>
+            </div>
+            <div class="infoContainer a">
+                <div class="card">
+                    <h3 class="outfitMed">Diet</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.diet %>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Average Litter Size</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.average_litter_size %>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Number of Species</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.number_of_species %>
+                    </p>
+                </div>
+            </div>
+            <div class="infoContainer b">
+                <div class="card">
+                    <h3 class="outfitMed">Slogan</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.slogan %>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Group</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.group %>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Top Speed</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.top_speed %>
+                    </p>
+                </div>
+            </div>
+            <div class="infoContainer c">
+                <div class="card">
+                    <h3 class="outfitMed">Lifespan</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.lifespan %>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Weight</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.weight %>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="outfitMed">Height</h3>
+                    <p class="outfitReg">
+                        <%= characteristics.height %>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+    
+        </div>
+    </main> 
+
+    <footer>
+        <p class="oufitReg">Made by Skylar Chapman</p>
+        <p class="oufitReg">Source: <a href="https://api-ninjas.com/api/animals">https://api-ninjas.com/api/animals</a> </p>
+    </footer>
+
+   </body>
+</html>
