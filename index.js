@@ -17,20 +17,7 @@ app.use(express.static('public'));
 // https://api.api-ninjas.com/v1/animals?name=
 
 app.get("/", async (req, res) => {
-    const apiKey = 'OBzQBOIgLTk/OHoGfxaZxA==NmbPaoVclpLSEPAC';
-    try {
-        const response = await axios.get("https://api.api-ninjas.com/v1/animals?name=cheetah", {
-            headers: {
-                'X-Api-Key': apiKey
-            }
-        });
-        const data = response.data;
-        const { name, taxonomy, locations, characteristics } = data[0];
-        res.render(__dirname + "/views/home.ejs", { name, taxonomy, locations, characteristics });
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        res.render( __dirname + "/views/home.ejs", { error });
-    }
+    res.render( __dirname + "/views/home.ejs");
 });
 
 app.post('/search', async (req, res) => {
@@ -47,11 +34,11 @@ app.post('/search', async (req, res) => {
         const data = response.data;
         console.log(data);
         const { name, taxonomy, locations, characteristics } = data[0];
-        res.render(__dirname + "/views/home.ejs", { name, taxonomy, locations, characteristics });
+        res.render(__dirname + "/views/search.ejs", { name, taxonomy, locations, characteristics });
     } catch (error) {
         const name = null;
         console.error('Error fetching data:', error);
-        res.render( __dirname + "/views/home.ejs", { error, name });
+        res.render( __dirname + "/views/search.ejs", { error, name });
     }
 
 });
